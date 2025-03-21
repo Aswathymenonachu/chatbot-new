@@ -8,11 +8,11 @@ from langchain.chains import RetrievalQA
 
 # Set OpenAI API Key
 os.environ["OPENAI_API_BASE"] = "https://litellm.deriv.ai/v1"
-os.environ["OPENAI_API_KEY"] = "sk-giTPMvWKHWKqfT90fxTSzA"
+os.environ["OPENAI_API_KEY"] = "sk-yHKuVuLvgYkZXbLVvG_pZw"
 
 # Load FAISS index
 embeddings = OpenAIEmbeddings()
-vector_store = FAISS.load_local("/Users/aswathymenon/Aswathy/python/faiss_index", embeddings, allow_dangerous_deserialization=True)
+vector_store = FAISS.load_local("/Users/aswathymenon/Aswathy/python/chatbot-new/faiss_index", embeddings, allow_dangerous_deserialization=True)
 
 # Create Retrieval Q&A Chain
 qa_chain = RetrievalQA.from_chain_type(
